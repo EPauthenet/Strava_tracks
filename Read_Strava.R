@@ -2,7 +2,7 @@ library(plotKML)
 library(cycleRtools)
 library(oce)
 library(stringr)
-#######################################################Open and save in a RData all the tracks
+#Open and save in a RData all the tracks#
 #Strava provides GPX or FIT files of your individual tracks together with an "activities.csv" file containing the id numbers, dates etc...
 
 M = read.csv("activities.csv")
