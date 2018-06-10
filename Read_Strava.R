@@ -1,12 +1,14 @@
-library(plotKML)
-library(cycleRtools)
-library(oce)
-library(stringr)
-#Open and save in a RData all the tracks#
-#Strava provides GPX or FIT files of your individual tracks together with an "activities.csv" file 
-#containing the id numbers, dates etc...
+#Open and save Strava tracks in a RData#
 
-#Output#
+#Strava provides the option to export an archive of your account (Bulk Export).
+#  - Choose "Settings," then find the "My Account" tab from the menu listed on the Left.
+#  - Select “Get Started” under “Download or Delete Your Account.”
+#  - Select “Request your archive” on the next page.
+#  - You will receive an email with a link to download your data (this may take a few hours.)
+#Your data archive will contain GPX or FIT files and a CSV files that includes
+#  - id, date, name, type, description, elapsed_time, distance, filename.
+
+#Output of this routine#
 #tr  : list object containg each track longitude (lon), latitude (lat), elevation (ele) and time in a dataframe.
 #ty  : factor object of the type of track (Run, Ride,...) extracted from activities.csv.
 #td  : vector of character containing the date of each track.
@@ -15,6 +17,12 @@ library(stringr)
 #Lat : vector of all the latitudes combined.
 #Ele : vector of all the elevations combined.
 
+library(plotKML)
+library(cycleRtools)
+library(oce)
+library(stringr)
+
+setwd("your_working_directory")
 M  = read.csv("activities.csv")
 lf = list.files()
 
