@@ -1,11 +1,11 @@
-#Open and save Strava tracks in a RData#
+#Processes Strava tracks (GPX and FIT files) in a data frame#
 
 #Strava provides the option to export an archive of your account (Bulk Export).
 #  - Choose "Settings," then find the "My Account" tab from the menu listed on the Left.
 #  - Select “Get Started” under “Download or Delete Your Account.”
 #  - Select “Request your archive” on the next page.
 #  - You will receive an email with a link to download your data (this may take a few hours.)
-#Your data archive will contain GPX or FIT files and a CSV files that includes
+#Your data archive will contain GPX or FIT files (depending if you use a Garmin, your phone...) and a CSV files that includes
 #  - id, date, name, type, description, elapsed_time, distance, filename.
 
 #Output of this routine#
@@ -17,7 +17,7 @@
 #Lat : vector of all the latitudes combined.
 #Ele : vector of all the elevations combined.
 
-require(plotKML)     #for the function readGPPX
+require(plotKML)     #for the function readGPX
 require(cycleRtools) #for the function read_fit
 require(stringr)     #for the function str_sub
 
