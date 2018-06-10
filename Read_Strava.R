@@ -41,4 +41,4 @@ for (i in 1:length(lf)){
 }
 ty = as.factor(ty)
 rm(M)
-save(tr,ty,td,lf,Lon,Lat,Ele,file = "Strava_2018-06-09.RData")
+save(tr,ty,td,lf,Lon,Lat,Ele,file = "Strava_tracks.RData")
