@@ -6,4 +6,4 @@ Read and plot GPS tracks (GTX and FIT files) from the "Bulk Export" provided by 
 ### Simple map
 ![alt text](https://github.com/EPauthenet/Strava_tracks/blob/master/Example_map.png)
 ### Color by activity
-![alt text](https://github.com/EPauthenet/Strava_tracks/blob/master/Example_activities.png)
+![alt text](https://github.com/EPauthenet/Strava_tracks/blob/master/Example_activity.png)
