@@ -17,10 +17,9 @@
 #Lat : vector of all the latitudes combined.
 #Ele : vector of all the elevations combined.
 
-library(plotKML)
-library(cycleRtools)
-library(oce)
-library(stringr)
+require(plotKML)     #for the function readGPPX
+require(cycleRtools) #for the function read_fit
+require(stringr)     #for the function str_sub
 
 setwd("your_working_directory")
 M  = read.csv("activities.csv")
