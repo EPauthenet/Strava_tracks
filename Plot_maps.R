@@ -8,8 +8,8 @@ for (i in 2:length(lf)){
 }
 
 #Color by activity#
-colo = c("green","skyblue","purple","coral","darkblue","gold")   #the colors you want
-lev = c("Hike","IceSkate","Ride","Run","Swim","Walk")            #the levels of factor in ty
+lev  = levels(ty)                   #the levels of factor in ty
+colo = sample(colors()[!colors() %in% paste("grey",seq(3,97),sep = "")],length(lev)) #Random colors (without the greys)
 plot(1,1,xlim = range(Lon,na.rm = T),ylim = range(Lat,na.rm = T),typ = "l"
   ,xlab = "",ylab = "",axes = F,col = "white")
 for (i in 1:length(lf)){
