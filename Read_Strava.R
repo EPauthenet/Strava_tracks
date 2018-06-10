@@ -50,5 +50,4 @@ for (i in 1:length(lf)){
   Ele = c(Ele,tr[[i]]$ele)
 }
 ty = as.factor(ty)
-rm(M)
 save(tr,ty,td,lf,Lon,Lat,Ele,file = "Strava_tracks.RData")
