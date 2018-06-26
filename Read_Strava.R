@@ -17,9 +17,9 @@
 #Lat : vector of all the latitudes combined.
 #Ele : vector of all the elevations combined.
 
-require(plotKML)     #for the function readGPX
-require(cycleRtools) #for the function read_fit
-require(stringr)     #for the function str_sub
+require(plotKML)
+require(cycleRtools)
+require(stringr)
 
 setwd("your_working_directory")
 M  = read.csv("activities.csv")
@@ -29,14 +29,14 @@ tr = list()
 ty = NULL
 td = NULL
 for (i in 1:length(lf)){
-  if(str_sub(lf[i], start= -3) == "gpx"){
-    Alist       = readGPX(lf[i], metadata = F, bounds = F,waypoints = F, tracks = T, routes = F)$tracks
+  if(stringr::str_sub(lf[i], start= -3) == "gpx"){
+    Alist       = plotKML::readGPX(lf[i], metadata = F, bounds = F,waypoints = F, tracks = T, routes = F)$tracks
     tr[[i]]     = Alist[[1]][[1]]
     tr[[i]]$ele = as.numeric(tr[[i]]$ele)
     rm(Alist)
   }  
   if(str_sub(lf[i], start= -3) == "fit"){
-    Alist   = read_fit(lf[i])
+    Alist   = cycleRtools::read_fit(lf[i])
     tr[[i]] = data.frame(lon  = Alist$lon
                         ,lat  = Alist$lat
                         ,ele  = Alist$elevation.m
