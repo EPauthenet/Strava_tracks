@@ -1,6 +1,6 @@
 # Strava tracks
 These functions read and plot GPS tracks (GTX and FIT files) from the "Bulk Export" provided by Strava since May 25th, 2018.
-To export an archive of your Strava account :
+To export an archive your Strava account :
   - Choose "Settings," then find the "My Account" tab from the menu listed on the Left.
   - Select “Get Started” under “Download or Delete Your Account.”
   - Select “Request your archive” on the next page.
